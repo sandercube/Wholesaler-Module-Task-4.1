@@ -1,0 +1,26 @@
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Sander_Wholesaler/js/ajax-add-to-cart": {},
+        "Sander_Wholesaler/js/search": {}
+    }
+}
+</script>
+<h2 style="text-align: center">Оптовый модуль</h2>
+<form class="form" method="post" action="<?= $block->getUrl('checkout/cart/add'); ?>">
+    <fieldset>
+        <legend>Артикул товара #SKU</legend>
+        <input name='sku' id='sku' type="text">
+        <datalist id="skulist" autocomplete="off" list="skulist">
+        </datalist>
+        <br>
+        <br>
+        <p>Количество</p>
+        <input name='qty' id='qty' type="text">
+        <br>
+        <br>
+        <button type="submit" title="Add to Cart" class="action tocart primary">
+            <span>Add to Cart</span>
+        </button>
+    </fieldset>
+</form>
